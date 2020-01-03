@@ -1,4 +1,7 @@
-# td-2
+# TODO list - first VueJS project
+### known issues
+- todo list based on common data; does not use a localstorage or API (it is not even ready for this)
+- mark after remove item is not proper
 
 ## Project setup
 ```
