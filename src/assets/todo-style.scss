@@ -1,0 +1,85 @@
+#app {
+  width: 400px;
+  margin: 50px auto;
+  font-family: Helvetica, Arial, Tahoma;
+  font-size: 14px;
+  
+  h1 {
+    text-align: center;
+  }
+
+  input[type="text"], label {
+    width: 100%;
+    flex: 0 1 auto;
+    padding: 4px 7px;
+    border: 1px solid #666;
+    line-height: 1;
+    font-family: Helvetica, Arial, Tahoma;
+    font-size: 14px;
+  }
+  label {
+    border: 2px solid transparent;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  button {
+    display: block;
+    background-color: transparent;
+    border: 1px solid #000;
+    padding: 6px 9px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  button, input{
+    border-radius: 15px;
+  }
+
+  .todo {
+    &-container {
+
+    }
+
+    &-add {
+      display: flex;
+      align-items: center;
+    }
+
+    &-list {
+      width: 100%;
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      &__item {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5px 0;
+        border-bottom: 1px solid #eee;
+        position: relative;
+
+        span {
+          display: block;
+          width: 100%;
+        }
+
+        input[type="checkbox"] {
+          width: 1px;
+          height: 1px;
+          position: absolute;
+          top: 0;
+          left: -9999px;
+        }
+
+        input[type="checkbox"]:checked + label, .itsDone {
+          text-decoration-line: line-through;
+          color: #ccc;
+        }
+      }
+    }
+  }
+}
